@@ -1,4 +1,4 @@
-var socket = io({transports: ['websocket']});
+var socket = io();//io({transports: ['websocket']})
 $(document).ready(()=>{
     socket.on('message', (msg)=> {
         $("#message-ul").append("<li>" + msg + "</li>")
